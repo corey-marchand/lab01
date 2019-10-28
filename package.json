@@ -4,8 +4,10 @@
   "description": "this will be sooooo cool",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage",
-    "lint": "eslint '**/*.js'"
+    "start": "node index.js",
+    "test": "jest --verbose",
+    "lint": "eslint './lib/**/*.js' --fix",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +19,9 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jsdoc": "^3.6.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/corey-marchand/lab01.git"
