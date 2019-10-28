@@ -15,42 +15,41 @@ describe('validator module performs basic validation of', () => {
     let bool = false;
   
 
-  it('strings', () => {
-    expect(validator.isString(str)).toBeTruthy();
-    expect(validator.isString(num || arr || func || obj || bool)).toBeFalsy();
+    it('strings', () => {
+      expect(validator.isString(str)).toBeTruthy();
+      expect(validator.isString(num || arr || func || obj || bool)).toBeFalsy();
+    });
+
+    it('arrays', () => {
+      expect(validator.isArray(input)).toBeFalsy();
+    });
+
+    it('objects', () => {
+      expect(validator.isObect(input)).toBeTruthy();
+    });
+
+    it('booleans', () => {
+      expect(validator.isBoolean(input)).toBeTruthy();
+    });
+
+    it('functions', () => {
+      expect(validator.isFunction(input)).toBeTruthy();
+    });
+
+    it('numbers', () => {
+      expect(validator.isNumber(input)).toBeTruthy();
+    });
   });
-
-  it('arrays', () => {
-    expect(validator.isArray(input)).toBeFalsy();
-  });
-
-  it('objects', () => {
-    expect(validator.isObect(input)).toBeTruthy();
-  });
-
-  it('booleans', () => {
-    expect(validator.isBoolean(input)).toBeTruthy();
-  });
-
-  it('functions', () => {
-    expect(validator.isFunction(input)).toBeTruthy();
-  });
-
-  it('numbers', () => {
-    expect(validator.isNumber(input)).toBeTruthy();
-  });
-
-
 });
 
 
 
 describe('validator module performs complex validations', () => {
 
-  const corey = {
+  // const corey = {
 
 
-  }
+  // }
 
   it('validates the presence of required object properties at any level', () => {
     // i.e. does person.hair.color exist and have a good value, not just person.hair
@@ -75,4 +74,3 @@ describe('validator module performs complex validations', () => {
   // TODO: Cover so, so many more cases
 
 });
-
