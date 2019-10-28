@@ -21,7 +21,7 @@ describe('validator module performs basic validation of', () => {
   });
 
   it('arrays', () => {
-    expect(validator.isArray(input)).toBeTruthy();
+    expect(validator.isArray(input)).toBeFalsy();
   });
 
   it('objects', () => {
@@ -48,7 +48,7 @@ describe('validator module performs basic validation of', () => {
 describe('validator module performs complex validations', () => {
 
   const corey = {
-    
+
 
   }
 
