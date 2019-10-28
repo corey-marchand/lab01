@@ -13,7 +13,7 @@ describe('validator module performs basic validation of', () => {
     let obj = {x:'y'};
     let func = () => {};
     let bool = false;
-  });
+  
 
   it('strings', () => {
     expect(validator.isString(str)).toBeTruthy();
